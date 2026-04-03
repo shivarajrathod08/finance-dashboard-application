@@ -492,8 +492,4 @@ SELECT * FROM financial_records;
 ---
 
 ## 👨‍💻 Author
-
-<div align="center">
-
-**Your Name**
 **Rathlavath Shivaraj**
