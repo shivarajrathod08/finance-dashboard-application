@@ -10,7 +10,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Swagger](https://img.shields.io/badge/Swagger-OpenAPI_3-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://swagger.io/)
 [![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+
 
 [Features](#-features) • [Tech Stack](#-tech-stack) • [Setup](#-setup--installation) • [API Docs](#-api-testing-with-swagger) • [Screenshots](#-screenshots)
 
@@ -115,14 +115,14 @@ finance-dashboard/
 │   │       └── sample-data.sql
 │   └── test/
 │       └── java/com/finance/dashboard/
-│           ├── controller/
-│           │   ├── AuthControllerIntegrationTest.java
-│           │   └── FinancialRecordControllerIntegrationTest.java
-│           └── service/
-│               ├── DashboardServiceTest.java
-│               └── UserServiceTest.java
+│           |
+│           |___ FinancedashboardapplicationApplicationTests
+│             
+│           
+│               
+│               
 ├── pom.xml
-├── FinanceDashboard.postman_collection.json
+|
 └── README.md
 ```
 
@@ -143,7 +143,7 @@ Ensure the following are installed:
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/finance-dashboard.git
+git clone https://github.com/shivarajrathod08/finance-dashboard-application.git
 cd finance-dashboard
 ```
 
@@ -496,19 +496,4 @@ SELECT * FROM financial_records;
 <div align="center">
 
 **Your Name**
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-username)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
-
-*Built with ❤️ using Spring Boot*
-
-</div>
-
----
-
-<div align="center">
-
-⭐ **If you found this project useful, please consider giving it a star!** ⭐
-
-</div>
+**Rathlavath Shivaraj**
