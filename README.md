@@ -454,7 +454,7 @@ SELECT * FROM financial_records;
 
 ### 5. Swagger — Create Financial Record
 
-![API Records](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/financial%20records.png?raw=true)
+![API Records](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/api-records.png?raw=true)
 
 > `POST /api/records` (ADMIN only) creates an income/expense transaction and returns the persisted record with timestamps.
 
