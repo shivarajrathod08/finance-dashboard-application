@@ -185,9 +185,9 @@ Expected output:
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  12.345 s
-[INFO] Finished at: 2026-04-02T19:28:00+05:30
+[INFO] Finished at: 2026-04-04T19:28:00+05:30
 [INFO] ------------------------------------------------------------------------
-```
+```          
 
 ---
 
@@ -210,10 +210,10 @@ On a successful run you will see Tomcat start, the HikariCP connection pool conn
 ![Console Output — Database Connection](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/db%20connection.png?raw=true)
 
 ```
-2026-04-02 19:28:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-02 19:28:27 [main] INFO  com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
-2026-04-02 19:28:28 [main] INFO  com.zaxxer.hikari.pool.HikariPool   - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54defd69
-2026-04-02 19:28:28 [main] INFO  com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2026-04-04 11:00:49 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-04 11:00:49 [main] INFO  com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2026-04-04 11:00:49 [main] INFO  com.zaxxer.hikari.pool.HikariPool   - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54defd69
+2026-04-04 11:00:49 [main] INFO  com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
 ```
 
 **Tomcat Started & Application Ready:**
@@ -221,8 +221,8 @@ On a successful run you will see Tomcat start, the HikariCP connection pool conn
 ![Console Output — Application Started](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/tom-cat-started.png?raw=true)
 
 ```
-2026-04-02 19:28:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer   - Tomcat started on port(s): 8080 (http)
-2026-04-02 19:28:32 [main] INFO  c.f.d.FinanceDashboardApplication   - Started FinanceDashboardApplication in 8.981 seconds
+2026-04-04 11:00:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer   - Tomcat started on port(s): 8080 (http)
+2026-04-04 11:00:54 [main] INFO  c.f.d.FinanceDashboardApplication   - Started FinanceDashboardApplication in 8.981 seconds
 ```
 
 The app is now live at: **`http://localhost:8080`**
@@ -269,16 +269,16 @@ The UI shows all API groups:
 }
 ```
 
-![Swagger — Auth Login Request & Response]( https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/user%20login.png?raw=true)
+![Swagger — Auth Login Request & Response](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/user%20login.png?raw=true)
 
 **Response — 200 OK:**
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0MzYwNjMxOSwiZXhwIjoxNzQzNjkyNzE5fQ.mGNWJijnGH6UalxVr7vssYUpQKUuv7NMPpm74HTTh3Tj",
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NTI4MTEyNiwiZXhwIjoxNzc1MzY3NTI2fQ.OV-WkGSrL4DE-AV1cdZOEQu9YVHs5RyQyOy_55tTEy1wt9N6d2Sgr8vhs2_vWN6KTZBuXyaNP0OuqsQNKBA0Tg",
   "tokenType": "Bearer",
   "username": "admin",
   "role": "ADMIN",
-  "expiresAt": "2026-04-03T19:35:04"
+  "expiresAt": "2026-04-05T11:08:46"
 }
 ```
 
@@ -308,12 +308,12 @@ The UI shows all API groups:
   "amount": 5000,
   "type": "INCOME",
   "category": "Salary",
-  "date": "2026-04-02",
+  "date": "2026-04-04",
   "description": "Monthly salary"
 }
 ```
 
-![Swagger — Create Record Request & Response](screenshots/api-records.png)
+![Swagger — Create Record Request & Response](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/financial%20records.png?raw=true)
 
 **Response — 201 Created:**
 ```json
@@ -322,11 +322,11 @@ The UI shows all API groups:
   "amount": 5000,
   "type": "INCOME",
   "category": "Salary",
-  "date": "2026-04-02",
+  "date": "2026-04-04",
   "description": "Monthly salary",
   "createdBy": "admin",
-  "createdAt": "2026-04-02T19:42:29.195353",
-  "updatedAt": "2026-04-02T19:42:29.195353"
+  "createdAt": "2026-04-04T11:14:27.28995",
+  "updatedAt": "2026-04-04T11:14:27.28995"
 }
 ```
 
@@ -353,7 +353,7 @@ All errors return a consistent JSON envelope:
 **403 Forbidden** (insufficient role):
 ```json
 {
-  "timestamp": "2026-04-02T19:42:00",
+  "timestamp": "2026-04-04T19:42:00",
   "status": 403,
   "error": "Forbidden",
   "message": "Access denied: insufficient permissions",
@@ -364,7 +364,7 @@ All errors return a consistent JSON envelope:
 **400 Bad Request** (validation failure):
 ```json
 {
-  "timestamp": "2026-04-02T19:42:00",
+  "timestamp": "2026-04-04T19:42:00",
   "status": 400,
   "error": "Bad Request",
   "message": "Validation failed",
@@ -409,7 +409,7 @@ SELECT * FROM financial_records;
 +----+---------+----------+----------------------------+------------+---------+----------------+--------+----------------------------+---------------+
 |  1 | 5000.00 | Salary   | 2026-04-01 14:01:02.496229 | 2026-04-01 | 0x00    | Monthly salary | INCOME | 2026-04-01 14:01:02.496229 |             1 |
 |  2 | 5000.00 | Salary   | 2026-04-02 14:12:29.195353 | 2026-04-02 | 0x00    | Monthly salary | INCOME | 2026-04-02 14:12:29.195353 |             1 |
-|  3 | 5000.00 | Salary   | 2026-04-04                 | 2026-04-04 | 0x00    | Monthly salary | INCOME | 2026-04-02                 |             1 |   
+|  3 | 5000.00 | Salary   | 2026-04-04 05:44:27.289950 | 2026-04-04 | 0x00    | Monthly salary | INCOME | 2026-04-04 05:44:27.289950 |             1 |   
 +----+---------+----------+----------------------------+------------+---------+----------------+--------+----------------------------+---------------+
 3 rows in set (0.00 sec)
 ```
