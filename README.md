@@ -207,7 +207,7 @@ On a successful run you will see Tomcat start, the HikariCP connection pool conn
 
 **Database Connection & Security Filter Chain:**
 
-![Console Output — Database Connection](screenshots/database-connection.png)
+![Console Output — Database Connection](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/db%20connection.png?raw=true)
 
 ```
 2026-04-02 19:28:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
@@ -218,7 +218,7 @@ On a successful run you will see Tomcat start, the HikariCP connection pool conn
 
 **Tomcat Started & Application Ready:**
 
-![Console Output — Application Started](screenshots/ConsoleOutput.png)
+![Console Output — Application Started](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/tom-cat-started.png?raw=true)
 
 ```
 2026-04-02 19:28:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer   - Tomcat started on port(s): 8080 (http)
@@ -247,7 +247,7 @@ The app is now live at: **`http://localhost:8080`**
 
 Navigate to **[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)**
 
-![Swagger UI — Full API Overview](screenshots/swagger-ui.png)
+![Swagger UI — Full API Overview](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/swagger%20%20api.png?raw=true)
 
 The UI shows all API groups:
 - 🔑 **Authentication** — `/api/auth/login`, `/api/auth/register`
@@ -269,7 +269,7 @@ The UI shows all API groups:
 }
 ```
 
-![Swagger — Auth Login Request & Response](screenshots/Auth-login.png)
+![Swagger — Auth Login Request & Response]( https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/user%20login.png?raw=true)
 
 **Response — 200 OK:**
 ```json
@@ -388,7 +388,7 @@ SHOW TABLES;
 SELECT * FROM financial_records;
 ```
 
-![MySQL — Tables and Records Output](screenshots/mysql-output.png)
+![MySQL — Tables and Records Output](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/financial%20records.png?raw=true)
 
 **Tables created automatically:**
 ```
@@ -409,8 +409,9 @@ SELECT * FROM financial_records;
 +----+---------+----------+----------------------------+------------+---------+----------------+--------+----------------------------+---------------+
 |  1 | 5000.00 | Salary   | 2026-04-01 14:01:02.496229 | 2026-04-01 | 0x00    | Monthly salary | INCOME | 2026-04-01 14:01:02.496229 |             1 |
 |  2 | 5000.00 | Salary   | 2026-04-02 14:12:29.195353 | 2026-04-02 | 0x00    | Monthly salary | INCOME | 2026-04-02 14:12:29.195353 |             1 |
+|  3 | 5000.00 | Salary   | 2026-04-04                 | 2026-04-04 | 0x00    | Monthly salary | INCOME | 2026-04-02                 |             1 |   
 +----+---------+----------+----------------------------+------------+---------+----------------+--------+----------------------------+---------------+
-2 rows in set (0.00 sec)
+3 rows in set (0.00 sec)
 ```
 
 > 📌 Note the `deleted = 0x00` (false) column — records are **soft-deleted** (flagged, never physically removed), preserving a full audit trail.
@@ -421,7 +422,7 @@ SELECT * FROM financial_records;
 
 ### 1. Application Console — Database Connected
 
-![Database Connection](screenshots/database-connection.png)
+![Database Connection](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/db%20connection.png?raw=true)
 
 > HikariCP connection pool successfully connects to MySQL and the security filter chain (including `JwtAuthenticationFilter`) is registered.
 
@@ -429,7 +430,7 @@ SELECT * FROM financial_records;
 
 ### 2. Application Console — Started Successfully
 
-![Console Output](screenshots/ConsoleOutput.png)
+![Console Output](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/tom-cat-started.png?raw=true)
 
 > Tomcat starts on port 8080 and `FinanceDashboardApplication` is fully loaded in under 9 seconds.
 
@@ -437,7 +438,7 @@ SELECT * FROM financial_records;
 
 ### 3. Swagger UI — Full API Overview
 
-![Swagger UI](screenshots/swagger-ui.png)
+![Swagger UI](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/swagger%20%20api.png?raw=true)
 
 > All API groups — Authentication, User Management, Financial Records, and Dashboard — are visible and fully documented with OpenAPI 3.
 
@@ -445,7 +446,7 @@ SELECT * FROM financial_records;
 
 ### 4. Swagger — Login & JWT Response
 
-![Auth Login](screenshots/Auth-login.png)
+![Auth Login](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/user%20login.png?raw=true)
 
 > `POST /api/auth/login` returns a signed JWT token, the user's role, and expiry timestamp in a single response.
 
@@ -453,7 +454,7 @@ SELECT * FROM financial_records;
 
 ### 5. Swagger — Create Financial Record
 
-![API Records](screenshots/api-records.png)
+![API Records](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/financial%20records.png?raw=true)
 
 > `POST /api/records` (ADMIN only) creates an income/expense transaction and returns the persisted record with timestamps.
 
@@ -461,7 +462,7 @@ SELECT * FROM financial_records;
 
 ### 6. MySQL — Tables & Records
 
-![MySQL Output](screenshots/mysql-output.png)
+![MySQL Output](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/financial%20records.png?raw=true)
 
 > Hibernate auto-generates `financial_records`, `roles`, and `users` tables. Records created via the API appear immediately with soft-delete support.
 
