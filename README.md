@@ -313,7 +313,7 @@ The UI shows all API groups:
 }
 ```
 
-![Swagger — Create Record Request & Response](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/financial%20records.png?raw=true)
+![Swagger — Create Record Request & Response](https://github.com/shivarajrathod08/finance-dashboard-application/blob/main/api-records.png?raw=true)
 
 **Response — 201 Created:**
 ```json
